@@ -262,7 +262,7 @@ public class UserRegisterRequest {
 public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public @ResponseBody Object register(@RequestBody UserRegisterRequest request){
+    public @ResponseBody Object register(UserRegisterRequest request){
       if (/* success */ true) {
         return new RegisterResponse(/* ... */);
       } else {
