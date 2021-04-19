@@ -561,7 +561,7 @@ public class User {
 
 ```java
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public @ResponseBody Object register(@RequestBody UserRegisterRequest request) throws IOException {
+    public @ResponseBody Object register(UserRegisterRequest request) throws IOException {
         SqlSession sqlSession = SqlSessionLoader.getSqlSession();
         User user = sqlSession.selectOne("adweb.lab2.UserMapper.findUserByUsername", request.getUsername());
         if (user != null) {
